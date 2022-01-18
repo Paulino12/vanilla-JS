@@ -26,11 +26,11 @@ a {
     cursor: pointer;
 }
 
-li {
+.sideBar li {
     list-style: none;
 }
 
-li::before {
+.sideBar li::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;

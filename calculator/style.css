@@ -1,6 +1,5 @@
 
-.mainSection {
-    height: 100%;
+.mainBg {
     background-image: url('assets/images/calculatorBg.jpg');
     background-position: center;
     background-repeat: no-repeat;
