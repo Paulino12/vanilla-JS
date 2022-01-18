@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="mainSection d-flex">
+        <div class="w-100 my-auto">
+            <div class="text-center">
+                <h1>Calculator</h1>
+            </div>
+            <div class="col-lg-6 mx-auto p-5 d-flex flex-column">
+                <!-- Display -->
+                <div class="card px-3 py-2 bg-light text-end d-flex flex-row justify-content-between">
+                    <div class="bg-warning px-5 rounded" id="showOps">
+                        
+                    </div>
+                    <div class="fs-3" id="calcDisplay">
+                        
+                    </div>
+                </div>
+                <div class="d-flex flex-row text-center">
+                    <div class="col-3 card p-3">%</div>
+                    <div class="col-3 card p-3 pointer" id="resetDisplay">CE</div>
+                    <div class="col-3 card p-3 pointer" id="delNumber"><i class="bi bi-arrow-left"></i></div>
+                    <div class="col-3 card p-3 pointer ops"><i class="fas fa-divide fa-lg fontAwesome"></i></div>
+                </div>
+                <div class="d-flex flex-row text-center">
+                    <div class="col-3 card p-3 pointer number">7</div>
+                    <div class="col-3 card p-3 pointer number">8</div>
+                    <div class="col-3 card p-3 pointer number">9</div>
+                    <div class="col-3 card p-3 pointer ops"><i class="fas fa-times fa-lg fontAwesome"></i></div>
+                </div>
+                <div class="d-flex flex-row text-center">
+                    <div class="col-3 card p-3 pointer number">4</div>
+                    <div class="col-3 card p-3 pointer number">5</div>
+                    <div class="col-3 card p-3 pointer number">6</div>
+                    <div class="col-3 card p-3 pointer ops"><i class="fas fa-minus fa-lg fontAwesome"></i></div>
+                </div>
+                <div class="d-flex flex-row text-center">
+                    <div class="col-3 card p-3 pointer number">1</div>
+                    <div class="col-3 card p-3 pointer number">2</div>
+                    <div class="col-3 card p-3 pointer number">3</div>
+                    <div class="col-3 card p-3 pointer ops"><i class="fas fa-plus fa-lg fontAwesome"></i></div>
+                </div>
+                <div class="d-flex flex-row text-center h-100">
+                    <div class="col-3 card p-3">+/-</div>
+                    <div class="col-3 card p-3 pointer number">0</div>
+                    <div class="col-3 card p-3 pointer number">.</i></div>
+                    <div class="col-3 card p-3 pointer" id="calcResult"><i class="fas fa-equals fa-lg fontAwesome"></i></div>
+                </div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

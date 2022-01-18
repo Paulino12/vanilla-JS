@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+* {
+    box-sizing: border-box;
+}
+
+.mainSection {
+    height: 100%;
+    background-image: url('assets/images/calculatorBg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pointer { 
+    cursor: pointer;
+}
+
+.pointer:hover {
+    /* color: #fff; */
+    font-weight: bold;
+    background-color: rgb(255, 193, 7, 0.3);
+    transform: scale(1);
+    box-shadow: rgba(255, 193, 7, 0.45) 0px 0px 8px 0px
+}
+
+.pointer:active {
+    background-color: rgb(255, 193, 7, 0.3);
+    transform: scale(0.95);
+}
+
+.fontAwesome {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
