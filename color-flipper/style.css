@@ -3,13 +3,7 @@
     height: 100%;
 }
 
-button:active {
-    transform: scale(0.95);
-}
 
-.form-control:focus {
-    box-shadow: none !important;
-}
 
 .pointer { 
     cursor: pointer;

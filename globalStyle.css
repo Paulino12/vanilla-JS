@@ -18,6 +18,14 @@ a {
     box-sizing: border-box;
 }
 
+button:active {
+    transform: scale(0.95);
+}
+
+.form-control:focus, .form-select:focus {
+    box-shadow: none !important;
+}
+
 .mainSection {
     height: 100%;
 }
