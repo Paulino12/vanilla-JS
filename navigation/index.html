@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Navigation</title>
+</head>
+<body>
+    <div class="mainSection mainBg d-flex align-items-center justify-content-center">
+        <div class="w-100 h-100 d-flex flex-row">
+            <!-- sidebar -->
+            <div class="sideBar bg-dark">
+                <!-- toggling icon -->
+                <div class="togglingIcon">
+                    <div class="arrowIcon"><i class="fas fa-arrow-left fa-2x"></i></div>
+                    <div class="barIcon"><i class="fas fa-bars fa-2x"></i></div>
+                </div>
+                
+                <!-- menu -->
+                <div class="menu">
+                    <div class="p-3 menuItems active align-items-center">
+                        <div class="text-center menuIcon"><i class="fas fa-th-large fa-2x"></i></div>
+                        <div class="menuTitle"><h4 class="mb-0">Dashboard</h4></div>
+                    </div>
+                    <div class="p-3 menuItems">
+                        <div class="text-center menuIcon"><i class="fas fa-user-circle fa-2x"></i></div>
+                        <div class="menuTitle"><h4 class="mb-0">Profile</h4></div>
+                    </div>
+                    <div class="p-3 menuItems">
+                        <div class="text-center menuIcon"><i class="fas fa-cogs fa-2x"></i></div>
+                        <div class="menuTitle"><h4 class="mb-0">Settings</h4></div>
+                    </div>
+                    <div class="p-3 menuItems">
+                        <div class="text-center menuIcon"><i class="fas fa-address-book fa-2x"></i></i></div>
+                        <div class="menuTitle"><h4 class="mb-0">Contact</h4></div>
+                    </div>
+                </div>
+            </div>
+            <!-- main content -->
+            <div class="mainContent position-relative">
+                <div class="position-absolute top-0 left-0 d-flex align-items-center justify-content-center w-100 mt-4">
+                    <a href="../index.html"><i class="fas fa-home fa-3x pointer text-dark"></i></a>
+                </div>
+                <div id="currentPage" class="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

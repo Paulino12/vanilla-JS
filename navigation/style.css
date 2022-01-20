@@ -1,0 +1,120 @@
+.mainSection {
+    height: 100%;
+}
+
+.pointer { 
+    cursor: pointer;
+}
+
+/* sidebar --- initials */
+.sideBar {
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+
+.togglingIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 1rem;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+}
+
+.centerBarIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowIcon {
+    display: inherit;
+    padding-right: 1rem;
+}
+
+.barIcon {
+    display: none;
+}
+
+.menu {
+    padding-top: 10rem;
+    /* padding-right: 0.5rem;
+    padding-left: 0.5rem; */
+}
+
+.menuItems {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.menuIcon {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItems:hover {
+    background-color: rgb(68, 66, 68);
+    color: white;
+    opacity: 1;
+}
+
+.menuItems:active {
+    transform: scale(0.95);
+}
+
+.active {
+    background-color: rgb(68, 66, 68);
+    color: white;
+    opacity: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* arrow icon clicked */
+
+@media (max-width: 768px) {
+    .togglingIcon {
+        display: none;
+    }
+
+    .menuItem {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .menuIcon {
+        width: 100%;
+    }
+
+    .menuTitle {
+        display: none;
+    }
+}
+
+/* Animation classes */
+.clickedToggleIcon:active {
+    transform: scale(0.9);
+    transition: all 1s;
+}
+
+.sideBarAnimate {
+    transition: ease-in-out;
+    transition-duration: 2s;
+}
+
+/* main content */
+.mainContent {
+    height: 100%;
+    width: 75%;
+}
