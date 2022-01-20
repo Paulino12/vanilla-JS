@@ -1,0 +1,12 @@
+.mainBg {
+    background-image: url('assets/images/food.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loadEnded {
+    transform: scale(0.9);
+    transition: ease-in-out;
+    transition-duration: 2s;
+}
