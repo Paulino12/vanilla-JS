@@ -1,5 +1,3 @@
-
-
 let currencyConvert = document.querySelector('#currencyConvert')
 let selectA = document.querySelector('#selectA')
 let selectB = document.querySelector('#selectB')
@@ -15,13 +13,12 @@ let selectedSymbolA = document.querySelector('#selectedSymbolA')
 let selectedSymbolB = document.querySelector('#selectedSymbolB')
 
 let inputA = document.querySelector('#inputA')
-let inputB = document.querySelector('#inputB')
+
+let convertRates = document.querySelector('#convertRates')
 
 let resume = document.querySelector('.resume')
 
 let currentDate = new Date()
-
-// let foundCurrSymbol = ""
 
 async function currencyList() {
 
@@ -54,44 +51,23 @@ async function currencyRates() {
 }
 
 // section A
-let countryNameA = ""
-let countryNameB = ""
 currencyList()
     .then((response) => {
-        
         let currSymbolA = Object.keys(response.symbols)
         selectedSymbolA.innerHTML = `
-            <option value='Symbol'>Symbol</option>
+            <option value='Symbol'>From</option>
             ${currSymbolA.map((item, index) => {
                 return `<option value=${item}>${item}</option>`
             })}
         `
         selectedSymbolA.addEventListener('change', (e) => {
+            resume.innerText = "" //reset RESUME
             // select form data
             if(!response.symbols[e.target.value]){
                 currNameA.innerText = "Country"
             }else{
                 currNameA.innerText = response.symbols[e.target.value]
             }
-            // currency pair rates
-            currencyRates()
-                .then((response) => {
-                    if(!response.result){
-                        inputB.value === ""
-                    }else{
-                        inputB.value = parseFloat(response.result).toFixed(2)
-                        if(selectedSymbolA !== selectedSymbolB){
-                            resume.innerHTML = `
-                                    <div>
-                                        <p class="valueFrom fs-6 mb-0">${inputA.value} ${selectedSymbolA.value} (${response.symbols[e.target.value]}) is equivalent to </p>
-                                    </div>
-                                    <div><p class="resultValue fs-1 fw-bold">${parseFloat(response.result).toFixed(2)} ${selectedSymbolB.value}</p></div>
-                                    <div class="date text-muted">${currentDate.toLocaleString()}</div>
-                            `
-                        }
-                    }
-                })
-            
         })
     })
 
@@ -99,42 +75,51 @@ currencyList()
 // section B
 currencyList()
     .then((response) => {
-        
         let currSymbolB = Object.keys(response.symbols)
         selectedSymbolB.innerHTML = `
-            <option value='Symbol'>Symbol</option>
+            <option value='Symbol'>To</option>
             ${currSymbolB.map((item) => {
                         return `<option value=${item}>${item}</option>`
                     })}
             `
         selectedSymbolB.addEventListener('change', (e) => {
+            resume.innerText = "" // reset RESUME
             if(!response.symbols[e.target.value]){
                 currNameB.innerText = "Country"
             }else{
                 currNameB.innerText = response.symbols[e.target.value]
             }
-
-            // currency pair rates
-            currencyRates()
-                .then((response) => {
-                    if(!response.result){
-                        inputB.value === ""
-                    }else{
-                        inputB.value = parseFloat(response.result).toFixed(2)
-                        if(selectedSymbolA !== selectedSymbolB){
-                            resume.innerHTML = `
-                                    <div>
-                                        <p class="valueFrom fs-6 mb-0">${inputA.value} ${selectedSymbolA.value} is equivalent to </p>
-                                    </div>
-                                    <div><p class="resultValue fs-1 fw-bold">${parseFloat(response.result).toFixed(2)} ${selectedSymbolB.value}</p></div>
-                                    <div class="date text-muted">${currentDate.toLocaleString()}</div>
-                            `
-                        }
-                    }
-                })
-            
-
         })
     })
+// reset RESUME when input active
+inputA.addEventListener('input', (e) => {
+    resume.innerText = ""
+})
+
+// convert
+convertRates.addEventListener('click', () => {
+    // validation before converting eg: negative value
+    if(inputA.value < 0) {
+        alert("Negative values cannot be converted")
+        inputA.value = ""
+    }else if(inputA.value === ""){
+        alert("You did not enter a value to be converted")
+    }
+    else{
+        // currency pair rates
+        currencyRates()
+        .then((response) => {
+            if(selectedSymbolA !== selectedSymbolB){
+                resume.innerHTML = `
+                        <div>
+                            <p class="valueFrom fs-6 mb-0">${inputA.value} ${selectedSymbolA.value} (${currNameA.innerText}) is equivalent to </p>
+                        </div>
+                        <div><p class="resultValue mb-0 fs-1 fw-bold">${parseFloat(response.result).toFixed(2)} ${selectedSymbolB.value} (${currNameB.innerText})</p></div>
+                        <div class="date text-muted">${currentDate.toLocaleString()}</div>
+                `
+            }
+        })
+    }
+})
 
 

@@ -24,46 +24,54 @@
                 <h1>Currency Converter</h1>
             </div>
             <div class="currencyArea container">
-                <div class="currencyLine">
-                    <div class="amountSymbol">
-                        <div class="inputSymbol">
-                            <input type="text" id="inputA" class="form-control" placeholder="Amount" />
+                <div class="currencyParentLine">
+                    <div class="amountAndConvert">
+                        <input type="number" min="0" id="inputA" class="form-control" placeholder="Amount" />
+                    </div>
+                    <div class="w-100">
+                        <div class="currencyLine">
+                            <div class="amountSymbol">
+                                <div id="selectA" class="inputSymbol">
+                                    <select class='form-select' id='selectedSymbolA'>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="countryName">
+                                <div class="countryNameInput" id="currNameA">
+                                    Country
+                                </div>
+                            </div>
                         </div>
-                        <div id="selectA" class="inputSymbol">
-                            <select class='form-select' id='selectedSymbolA'>
-                                
-                            </select>
+                        <div class="currencyLine">
+                            <div class="amountSymbol">
+                                <div id="selectB" class="inputSymbol">
+                                    <select class='form-select' id='selectedSymbolB'>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="countryName">
+                                <div class="countryNameInput" id="currNameB">
+                                    Country
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="countryName">
-                        <div class="countryNameInput" id="currNameA">
-                            Country
-                        </div>
+                    <div class="amountAndConvert">
+                        <button class="btn btn-success btn-lg" id="convertRates">Convert</button>
                     </div>
                 </div>
-                <div class="currencyLine">
-                    <div class="amountSymbol">
-                        <div class="inputSymbol">
-                            <input type="text" id="inputB" class="form-control" placeholder="Amount" />
-                        </div>
-                        <div id="selectB" class="inputSymbol">
-                            <select class='form-select' id='selectedSymbolB'>
-                                
-                            </select>
-                        </div>
-                    </div>
-                    <div class="countryName">
-                        <div class="countryNameInput" id="currNameB">
-                            Country
-                        </div>
-                    </div>
-                </div>
-                <div class="resume">
+                <div class="resume card shadow">
+                    <h4 class="text-muted text-decoration-underline fs-3">Conversion Result will be displayed here</h4>
                     <!-- <div>
-                        <p class="valueFrom fs-6 mb-0">1 usd (United State of America) is equivalent to </p>
+                        <p class="valueFrom fs-6 mb-0">12 ANG (Netherlands Antillean Guilder) is equivalent to </p>
                     </div>
-                    <div><p class="resultValue fs-1 fw-bold">45 GBP ()</p></div>
-                    <div class="date text-muted">today</div> -->
+                    <div>
+                        <p class="resultValue mb-0 fs-1 fw-bold">102.85 MVR</p>
+                        <small>(Maldivian Rufiyaa)</small>
+                    </div>
+                    <div class="date text-muted">21/01/2022, 16:08:33</div> -->
                 </div>
             </div>
         </div>
