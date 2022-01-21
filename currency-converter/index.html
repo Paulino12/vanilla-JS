@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="stylesheet" href="style.css">
     <title>Currency Converter</title>
 </head>
 <body>
@@ -22,46 +23,47 @@
             <div class="text-center">
                 <h1>Currency Converter</h1>
             </div>
-            <div class="h-75 mx-auto text-center 
-                d-flex flex-column bg-info container">
-                <div class="row h-25 p-2 bg-info bg-danger">
-                    <div class="col-7 col-md-6 d-flex flex-row px-0 bg-warning">
-                        <div>
+            <div class="currencyArea container">
+                <div class="currencyLine">
+                    <div class="amountSymbol">
+                        <div class="inputSymbol">
                             <input type="text" id="inputA" class="form-control" placeholder="Amount" />
                         </div>
-                        <div id="selectA">
+                        <div id="selectA" class="inputSymbol">
                             <select class='form-select' id='selectedSymbolA'>
                                 
                             </select>
                         </div>
                     </div>
-                    <div class="col-5 col-md-6 bg-primary">
-                        <div class="form-control" id="currNameA">
+                    <div class="countryName">
+                        <div class="countryNameInput" id="currNameA">
                             Country
                         </div>
                     </div>
                 </div>
-                <div class="w-100 h-25 p-2 bg-warning mx-auto d-flex flex-row">
-                    <div class="col-6 me-2">
-                        <div class="d-flex flex-row align-items-end justify-content-end gap-2">
-                            <div>
-                                <input type="text" id="inputB" class="form-control" placeholder="Amount" />
-                            </div>
-                            <div id="selectB">
-                                <select class='form-select' id='selectedSymbolB'>
-                                    
-                                </select>
-                            </div>
+                <div class="currencyLine">
+                    <div class="amountSymbol">
+                        <div class="inputSymbol">
+                            <input type="text" id="inputB" class="form-control" placeholder="Amount" />
+                        </div>
+                        <div id="selectB" class="inputSymbol">
+                            <select class='form-select' id='selectedSymbolB'>
+                                
+                            </select>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="form-control w-50" id="currNameB">
+                    <div class="countryName">
+                        <div class="countryNameInput" id="currNameB">
                             Country
                         </div>
                     </div>
                 </div>
-                <div class="w-100 h-100 p-2 bg-danger mx-auto d-flex flex-row">
-
+                <div class="resume">
+                    <!-- <div>
+                        <p class="valueFrom fs-6 mb-0">1 usd (United State of America) is equivalent to </p>
+                    </div>
+                    <div><p class="resultValue fs-1 fw-bold">45 GBP ()</p></div>
+                    <div class="date text-muted">today</div> -->
                 </div>
             </div>
         </div>

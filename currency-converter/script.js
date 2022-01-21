@@ -17,6 +17,10 @@ let selectedSymbolB = document.querySelector('#selectedSymbolB')
 let inputA = document.querySelector('#inputA')
 let inputB = document.querySelector('#inputB')
 
+let resume = document.querySelector('.resume')
+
+let currentDate = new Date()
+
 // let foundCurrSymbol = ""
 
 async function currencyList() {
@@ -34,7 +38,7 @@ async function currencyList() {
     return data
 }
 
- // fetching currencies rates
+//  fetching currencies rates
 async function currencyRates() {
     let response = await fetch(`https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=${selectedSymbolA.value}&to=${selectedSymbolB.value}&amount=${inputA.value}`, {
         "method": "GET",
@@ -50,6 +54,8 @@ async function currencyRates() {
 }
 
 // section A
+let countryNameA = ""
+let countryNameB = ""
 currencyList()
     .then((response) => {
         
@@ -74,8 +80,18 @@ currencyList()
                         inputB.value === ""
                     }else{
                         inputB.value = parseFloat(response.result).toFixed(2)
+                        if(selectedSymbolA !== selectedSymbolB){
+                            resume.innerHTML = `
+                                    <div>
+                                        <p class="valueFrom fs-6 mb-0">${inputA.value} ${selectedSymbolA.value} (${response.symbols[e.target.value]}) is equivalent to </p>
+                                    </div>
+                                    <div><p class="resultValue fs-1 fw-bold">${parseFloat(response.result).toFixed(2)} ${selectedSymbolB.value}</p></div>
+                                    <div class="date text-muted">${currentDate.toLocaleString()}</div>
+                            `
+                        }
                     }
                 })
+            
         })
     })
 
@@ -105,8 +121,18 @@ currencyList()
                         inputB.value === ""
                     }else{
                         inputB.value = parseFloat(response.result).toFixed(2)
+                        if(selectedSymbolA !== selectedSymbolB){
+                            resume.innerHTML = `
+                                    <div>
+                                        <p class="valueFrom fs-6 mb-0">${inputA.value} ${selectedSymbolA.value} is equivalent to </p>
+                                    </div>
+                                    <div><p class="resultValue fs-1 fw-bold">${parseFloat(response.result).toFixed(2)} ${selectedSymbolB.value}</p></div>
+                                    <div class="date text-muted">${currentDate.toLocaleString()}</div>
+                            `
+                        }
                     }
                 })
+            
 
         })
     })
