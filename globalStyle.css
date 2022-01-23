@@ -22,6 +22,10 @@ button:active {
     transform: scale(0.95);
 }
 
+button:focus {
+    box-shadow: none !important;
+}
+
 .form-control:focus, .form-select:focus {
     box-shadow: none !important;
 }

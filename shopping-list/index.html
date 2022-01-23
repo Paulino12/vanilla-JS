@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping List</title>
+</head>
+<body>
+    <div class="mainSection d-flex bg-light position-relative">
+        <div class="position-absolute top-0 left-0 d-flex align-items-center justify-content-center w-100 mt-4">
+            <a href="../index.html"><i class="fas fa-home fa-3x pointer"></i></a>
+        </div>
+        <div class="mainArea">
+            <div class="text-center">
+                <h1>Shopping List</h1>
+            </div>
+            <div class="shoppingSection">
+                <div class="grocerySection">
+                    <input type="text" maxlength="25" placeholder="Enter Grocery Name" class="form-control groceryInput" />
+                    <div id="addPdtDiv">
+                        <button class="btn btn-sm btn-success addPdt"><i class="fas fa-plus fa-2x"></i></button>
+                    </div>
+                    <div id="updatePdtDiv">
+                        <!-- <button class="btn btn-sm btn-success updatePdt"><i class="fas fa-plus fa-2x"></i></button> -->
+                    </div>
+                </div>
+                <div class="groceryLength">
+                    <i class="fas fa-shopping-cart fa-3x"></i>
+                    <small class="totalPdts"></small>
+                </div>
+                <div class="groceries">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

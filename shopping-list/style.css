@@ -1,0 +1,120 @@
+
+.mainArea {
+    height: 75%;
+    width: 100%;
+    margin: auto;
+}
+
+.shoppingSection{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grocerySection{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+}
+
+.groceryLength {
+    width: 25%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: #34deeb; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.totalPdts {
+    position: absolute;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.groceries {
+    width: 75%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.groceryItem {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 2.75rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+.itemName {
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.groceryActions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.fas:active {
+    transform: scale(0.9);
+}
+
+.fa-pen {
+    color: green;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: red;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #ffc123;
+}
+
+
+@media (max-width: 1200px) {
+    .grocerySection {
+        width: 100%;
+    }
+
+    .groceries {
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .shoppingSection {
+        width: 100%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
