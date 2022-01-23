@@ -15,32 +15,26 @@
     <title>Vanilla JS Projects</title>
 </head>
 <body>
-    <div class="mainSection d-flex bg-light">
-        <div class="h-100 w-100 d-flex align-items-center justify-content-center">
-            <a class="btn btn-warning p-5 fs-3" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
-                Explore Vanilla Js Projects
-            </a>
-        </div>
-
-        <div class="offcanvas offcanvas-start sideBar" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasLabel">Select a Project Below</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="homePageSection">
+        <div class="text-center h-100 py-5 d-flex flex-column align-items-center justify-content-center">
+            <div class="homePageTitle">
+                <h1>Vanilla JS Projects</h1>
             </div>
-            <div class="offcanvas-body">
-                <ul>
-                    <li><a href="/calculator/index.html">Calculator</a></li>
-                    <li><a href="/color-flipper/index.html">Colors Checker</a></li>
-                    <li><a href="/image-loader/index.html">Image Loader</a></li>
-                    <li><a href="/navigation/index.html">Navigation</a></li>
-                    <li><a href="/currency-converter/index.html">Currency Converter</a></li>
-                    <li><a href="/food-menu/index.html">Food Menu</a></li>
-                </ul>
+            <div class="mainArea" id="jsProjects">
+                <!-- <div class="projectCard">
+                    <a href="/projects/calculator/index.html">
+                        <img src="./assets/images/calculator.jpg" />
+                        <div class="projectTitle">
+                            Calculator
+                        </div>
+                    </a>
+                </div> -->
             </div>
         </div>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -10,48 +10,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="../globalStyle.css">
+    <link rel="stylesheet" href="../../globalStyle.css">
     <link rel="stylesheet" href="style.css">
-    <title>Color Flipper</title>
+    <title>Shopping List</title>
 </head>
 <body>
     <div class="mainSection d-flex bg-light position-relative">
         <div class="position-absolute top-0 left-0 d-flex align-items-center justify-content-center w-100 mt-4">
-            <a href="../index.html"><i class="fas fa-home fa-3x pointer"></i></a>
+            <a href="../../index.html"><i class="fas fa-home fa-3x pointer"></i></a>
         </div>
-        <div class="h-75 w-100 my-auto ">
+        <div class="shoppingMainArea">
             <div class="text-center">
-                <h1>Colors Checker</h1>
+                <h1>Shopping List</h1>
             </div>
-            <div class="w-75 h-75 mx-auto text-center 
-                d-flex flex-row align-items-center 
-                justify-content-center position-relative">
-                <div class="d-flex flex-column w-50 text-start">
-                    <div class="d-flex flex-column">
-                        <div class="d-flex flex-row w-100 px-3">
-                            <small class="d-inline h-100 fs-1 me-2">#</small>
-                            <input type="text" 
-                            placeholder="HEX here"
-                            id="hexInput" class="form-control text-uppercase" />
-                        </div>
-                        <div class="position-absolute top-0 left-0 w-100
-                        d-flex align-items-center justify-content-center p-2">
-                            <small  id="notification"></small>
-                        </div>
-                        
-                        <div class="d-flex flex-row mt-3 w-100 px-3">
-                            <span class="d-inline h-100 me-1">RGB</span>
-                            <span id="rgbValues"></span>
-                        </div>
+            <div class="shoppingSection">
+                <div class="grocerySection">
+                    <input type="text" maxlength="25" placeholder="Enter Grocery Name" class="form-control groceryInput" />
+                    <div id="addPdtDiv">
+                        <button class="btn btn-sm btn-success addPdt"><i class="fas fa-plus fa-2x"></i></button>
+                    </div>
+                    <div id="updatePdtDiv">
+                        <!-- <button class="btn btn-sm btn-success updatePdt"><i class="fas fa-plus fa-2x"></i></button> -->
                     </div>
                 </div>
-                <div class="w-50 h-50 card me-3" id="areaColor">
-                   
+                <div class="groceryLength">
+                    <i class="fas fa-shopping-cart fa-3x"></i>
+                    <small class="totalPdts"></small>
+                </div>
+                <div class="groceries">
+
                 </div>
             </div>
         </div>
     </div>
-    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

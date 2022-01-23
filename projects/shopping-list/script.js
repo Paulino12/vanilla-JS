@@ -50,7 +50,6 @@ addPdt.addEventListener('click', () => {
                 let filteredGroceries = groceryItems.filter((elt) => elt.id.toString() !== deletePdt[i].id)
                 groceryItems = filteredGroceries
     
-                console.log(groceryItems)
                 let grocery = document.getElementById(`${deletePdt[i].id}`)
                 grocery.classList.add('d-none')
                 if(!groceryItems.length){
@@ -82,7 +81,15 @@ addPdt.addEventListener('click', () => {
                 let check = document.querySelector('.fa-check')
                 check.addEventListener('click', () => {
 
-                    grocery.childNodes[1].innerHTML = `<h4 class="groceryName">${groceryInput.value}</h4>`
+                    let retrievedItem = groceryItems.filter((elt) => elt.id.toString() === editPdt[i].id)
+                    let thisItem = retrievedItem.map((item) => {
+                        return item.name
+                    })
+                    console.log(thisItem.splice(0, 1, groceryInput.value))
+                    console.log(thisItem)
+                    
+
+                    grocery.childNodes[1].innerHTML = `<h4 class="itemName">${groceryInput.value}</h4>`
                     
                     // Reset after updating
                     updatePdtDiv.innerHTML = ""
