@@ -3,6 +3,10 @@ let calcDisplay = document.getElementById('calcDisplay')
 calcDisplay.innerHTML = "0"
 
 let number = document.getElementsByClassName('number')
+let percent = document.getElementById('percent')
+
+let ops = document.getElementsByClassName('ops')
+let showOps = document.getElementById('showOps')
 
 let selectVal = []
 let valToCompute = []
@@ -10,6 +14,18 @@ let chosenOperator = ""
 let totalResult = []
 
 let lastValue = 0 // last value in total result array
+
+percent.addEventListener('click', () => {
+    if(calcDisplay.innerHTML === "0"){
+        return
+    }else{
+        let percentValue = parseFloat(calcDisplay.innerHTML).toFixed(2)/100
+        totalResult.push(percentValue)
+        calcDisplay.innerHTML = totalResult[totalResult.length - 1]
+        showOps.innerHTML = '<i class="fas fa-percentage fa-xs fontAwesome"></i>'
+    }
+    
+})
 
 for (let index = 0; index < number.length; index++) {
     number[index].addEventListener('click', () => {
@@ -22,7 +38,7 @@ for (let index = 0; index < number.length; index++) {
             switch (chosenOperator) {
             case "addition":
                 selectVal.push(number[index].innerHTML)
-                calcDisplay.innerHTML = parseFloat(selectVal.join('')).toFixed(2)
+                calcDisplay.innerHTML = selectVal.join('')
                 if(!lastValue){
                     totalResult.push(totalResult[0] + parseFloat(selectVal.join('')))
                 }else{
@@ -32,7 +48,7 @@ for (let index = 0; index < number.length; index++) {
 
             case "substraction":
                 selectVal.push(number[index].innerHTML)
-                calcDisplay.innerHTML = parseFloat(selectVal.join('')).toFixed(2)
+                calcDisplay.innerHTML = selectVal.join('')
                 if(!lastValue){
                     totalResult.push(totalResult[0] - parseFloat(selectVal.join('')))
                 }else{
@@ -42,7 +58,7 @@ for (let index = 0; index < number.length; index++) {
 
             case "multiplication":
                 selectVal.push(number[index].innerHTML)
-                calcDisplay.innerHTML = parseFloat(selectVal.join('')).toFixed(2)
+                calcDisplay.innerHTML = selectVal.join('')
                 if(!lastValue){
                     totalResult.push(totalResult[0] * parseFloat(selectVal.join('')))
                 }else{
@@ -99,8 +115,6 @@ resetDisplay.addEventListener('click', () => {
     showOps.innerHTML = ""
 })
 
-let ops = document.getElementsByClassName('ops')
-let showOps = document.getElementById('showOps')
 for (let i = 0; i < ops.length; i++) {
     ops[i].addEventListener('click', () => {
         if(!selectVal.join('')){
@@ -195,6 +209,12 @@ calcResult.addEventListener('click', () => {
     }else{
         showOps.innerHTML = '<i class="fas fa-equals fa-xs fontAwesome"></i>'
         calcDisplay.innerHTML = parseFloat(val).toFixed(2)
+        // selectVal = []
+        // valToCompute = []
+        // // totalResult = []
+        // lastValue = parseFloat("")
+        // chosenOperator = ""
+        // // showOps.innerHTML = ""
     }
 })
 

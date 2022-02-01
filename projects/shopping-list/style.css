@@ -94,8 +94,31 @@
     cursor: pointer;
 }
 
-.active {
+.active, .paginationActive {
     background-color: #ffc123;
+}
+
+/* Pagination */
+.renderedPagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* gap: 5px; */
+}
+
+.renderedPagination button {
+    border-radius: 100% !important;
+    /* background-color: #ece9e9; */
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-angle-left, .fa-angle-right {
+    border-radius: 100%;
+    padding: 0.3rem;
+    cursor: pointer;
 }
 
 

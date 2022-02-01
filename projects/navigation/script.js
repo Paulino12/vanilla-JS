@@ -9,34 +9,6 @@ let barIcon = document.querySelector('.barIcon')
 let menu = document.querySelector('.menu')
 let currentPage = document.querySelector('#currentPage')
 
-// let menuObjects = [
-//     {
-//         id: 1,
-//         menuComponent: `<div class="p-3 menuItem">
-//                             <div class="text-center menuIcon"><i class="fas fa-th-large fa-2x"></i></div>
-//                             <div class="menuTitle"><h4>Dashboard</h4></div>
-//                         </div>`,
-//         currentPage: `This is the dashboard`
-//     },
-//     {
-//         id: 2,
-//         menuComponent: `<div class="p-3 menuItem">
-//                             <div class="text-center menuIcon"><i class="fas fa-user-circle fa-2x"></i></div>
-//                             <div class="menuTitle"><h4>Profile</h4></div>
-//                         </div>`,
-//         currentPage: `This is the profile`
-//     },
-//     {
-//         id: 3,
-//         menuComponent: `<div class="p-3 menuItem">
-//                             <div class="text-center menuIcon"><i class="fas fa-cogs fa-2x"></i></div>
-//                             <div class="menuTitle"><h4>Settings</h4></div>
-//                         </div>`,
-//         currentPage: `This is the settings`
-//     },
-
-// ]
-
 let menuItems = document.getElementsByClassName('menuItems')
 let menuIcon = document.getElementsByClassName('menuIcon')
 let menuTitle = document.getElementsByClassName('menuTitle')
