@@ -209,12 +209,6 @@ calcResult.addEventListener('click', () => {
     }else{
         showOps.innerHTML = '<i class="fas fa-equals fa-xs fontAwesome"></i>'
         calcDisplay.innerHTML = parseFloat(val).toFixed(2)
-        // selectVal = []
-        // valToCompute = []
-        // // totalResult = []
-        // lastValue = parseFloat("")
-        // chosenOperator = ""
-        // // showOps.innerHTML = ""
     }
 })
 
