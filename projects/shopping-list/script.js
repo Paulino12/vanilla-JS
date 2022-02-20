@@ -42,6 +42,8 @@ function editProduct() {
         editPdt[i].addEventListener('click', () => {
             let grocery = document.getElementById(`${editPdt[i].id}`)
 
+            
+
             // change active class to be unique
             let current = document.getElementsByClassName('active')
             for (let j = 0; j < current.length; j++) {
@@ -56,7 +58,12 @@ function editProduct() {
             groceryInput.value = grocery.innerText
 
             let check = document.querySelector('.fa-check')
-            check.addEventListener('click', () => {                
+            check.addEventListener('click', () => {       
+                
+                // find index of this item by its id
+                let foundItemIndex = groceryItems.findIndex(elt => elt.id.toString() === editPdt[i].id)
+                // change item in the array
+                groceryItems[foundItemIndex] = { id: parseInt(editPdt[i].id), name: groceryInput.value }
 
                 grocery.childNodes[1].innerHTML = `<h4 class="itemName">${groceryInput.value}</h4>`
                 
