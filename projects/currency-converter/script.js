@@ -26,7 +26,7 @@ async function currencyList() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "currency-conversion-and-exchange-rates.p.rapidapi.com",
-            "x-rapidapi-key": "bcf8f46a49msh87f48473fdb7b90p126c0fjsn49fba50b855f"
+            "x-rapidapi-key": `${process.env.RAPID_API_KEY}`
         }
     })
 
@@ -41,7 +41,7 @@ async function currencyRates() {
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "currency-conversion-and-exchange-rates.p.rapidapi.com",
-            "x-rapidapi-key": "bcf8f46a49msh87f48473fdb7b90p126c0fjsn49fba50b855f"
+            "x-rapidapi-key": `${process.env.RAPID_API_KEY}`
         }
     })
 
