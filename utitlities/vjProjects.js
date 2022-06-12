@@ -48,6 +48,13 @@ export const vjProjects = [
         link: "/projects/image-loader/index.html",
         image: "./assets/images/imageLoader.jpg",
         description: ""
+    },
+    {
+        id: 8,
+        name: "Star Rating",
+        link: "/projects/star-rating/index.html",
+        image: "./assets/images/star-rating.jpg",
+        description: ""
     }
     
 ]
