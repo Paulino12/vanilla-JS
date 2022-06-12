@@ -1,0 +1,11 @@
+.iconColor {
+    color: rgb(233, 233, 134);
+}
+
+.starResult {
+    background-color: rgb(181, 181, 20);
+}
+
+#stars {
+    font-size: 5rem;
+}
