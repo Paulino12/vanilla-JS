@@ -24,7 +24,6 @@ for (let i = 0; i < foodCategories.length; i++) {
             let selectedCategoryToRender = selectedCategory.map((food) => {
                 return foodCardTemplate(food.image, food.name, food.price, food.description)
             })
-            console.log(selectedCategoryToRender.length)
             if(selectedCategoryToRender.length < 4) {
                 menuItems.classList.remove('menuItems')
                 menuItems.classList.add('menuItemsLessThan3')
