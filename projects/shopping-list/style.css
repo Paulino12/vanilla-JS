@@ -108,11 +108,18 @@
 }
 
 .renderedPagination button {
+    width: 30px;
+    height: 30px;
     border-radius: 100% !important;
     /* background-color: #ece9e9; */
     color: #000;
     border: none;
     cursor: pointer;
+}
+
+.renderedPagination button:hover {
+    background-color: #e4e2db;
+    box-shadow: 0 0 5px #e4e2db;
 }
 
 .fa-angle-left, .fa-angle-right {

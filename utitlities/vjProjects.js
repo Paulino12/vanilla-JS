@@ -32,7 +32,7 @@ export const vjProjects = [
         id: 5,
         name: "Shopping List",
         link: "/projects/shopping-list/index.html",
-        image: "./assets/images/shoppingList.jpg",
+        image: "./assets/images/shoppingList1.jpg",
         description: ""
     },
     {
