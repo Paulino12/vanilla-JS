@@ -57,7 +57,10 @@ const largeSideBar = () => {
 
     // menu items
     for (let i = 0; i < menuTitle.length; i++) {
-        menuTitle[i].style.display = "inherit"
+        // delay appearance of title on expanding
+        setTimeout(() => {
+            menuTitle[i].style.display = "inherit"
+        }, 250);
     }
     for (let i = 0; i < menuIcon.length; i++) {
         menuIcon[i].style.width = "25%"

@@ -1,0 +1,188 @@
+
+
+/* General Styling */
+.mainMenu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease-in;
+  font-size: 19px;
+}
+
+.mainMenu a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.mainMenu .menuLevel1 {
+  background: white;
+}
+
+.menuLevel1Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #303031;
+  padding: 0px 100px;
+  height: 79px;
+}
+
+.toggleMenu {
+  width: 200px;
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggleMenu img {
+  width: 22px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.toggleOpen {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.toggleClose {
+  display: none;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactLink {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 50em) {
+    .menuLevel1Container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+    }
+    .contactLink {
+      display: none;
+    }
+}
+
+.menuLevel2 {
+  background: #303031;
+  height: 0px;
+  overflow: hidden;
+  transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
+}
+
+.opened {
+  height: 52.2px;
+}
+
+.menuLevel2Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.menuLevel2Container .menuLevel2Link {
+  padding: 10px 30px;
+}
+
+.menuLevel2Container .menuLevel2Link a {
+  color: white;
+  font-weight: var(--fw-regular);
+}
+
+.menuLevel3 {
+  position: absolute;
+  top: 130px;
+  left: 0;
+  width: 100%;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background: #303031;
+  overflow: hidden;
+}
+
+.menuLevel3Container {
+  height: 0px;
+  transition: all cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.5s;
+}
+
+.menuLevel3Container a {
+  color: white;
+  padding: 15px 30px;
+  font-size: medium;
+}
+
+.menuLevel2Link:hover .menuLevel3 {
+  border-top: 1px solid white;
+}
+
+.menuLevel2Link:hover .menuLevel3Container {
+  height: 58.5px;
+  padding: 15px 0;
+}
+
+/* Banner */
+.bannerContainer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bannerText {
+  position: relative;
+  z-index: 1;
+  font-size: larger;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 35vh;
+  font-size: var(--fs-700);
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  display: flex;
+  background: #303031;
+}
+
+@media (max-width: 50em) {
+  .bannerText {
+    font-size: 1.5rem;
+  }
+}

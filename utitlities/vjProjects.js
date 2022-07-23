@@ -55,6 +55,13 @@ export const vjProjects = [
         link: "/projects/star-rating/index.html",
         image: "./assets/images/star-rating.jpg",
         description: ""
+    },
+    {
+        id: 9,
+        name: "Toggled Menu",
+        link: "/projects/navigation1/index.html",
+        image: "./assets/images/navigation1.jpg",
+        description: ""
     }
     
 ]
