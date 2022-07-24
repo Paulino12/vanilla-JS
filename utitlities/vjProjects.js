@@ -18,7 +18,7 @@ export const vjProjects = [
         id: 3,
         name: "Navigation",
         link: "/projects/navigation/index.html",
-        image: "./assets/images/navigation.jpg",
+        image: "./assets/images/nav1.jpg",
         description: ""
     },
     {
