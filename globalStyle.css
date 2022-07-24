@@ -98,7 +98,8 @@ html:focus-within {
 /* Set core body defaults */
 
 html, body {
-    height: 100%;
+    height: 100vh;
+    background-color: #f8f9fa;
 }
 
 body {
@@ -163,15 +164,26 @@ button:focus {
     box-shadow: none !important;
 }
 
-.homePageSection {
-    /* width: auto; */
+.homePageContainer {
+    text-align: center;
+    padding: 1rem 6rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    /* background-color: #234466; */
-    background-color: #f8f9fa;
-    /* background-color: #719ac4; */
+}
+
+.total {
+    height: 2rem;
+    width: 1rem;
+    border-radius: 50%;
+    padding: 0.5em 1em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    line-height: 1;
+    color: white;
+    font-size: var(--fs-600);
+    background-color: var(--clr-neutral-900);
+    box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
 }
 
 .homePageTitle {
@@ -216,23 +228,17 @@ button:focus {
     background-color: #f8f9fa;
 }
 
-.mainArea {
-    /* height: 75%; */
-    /* width: 100%; */
-    /* display: flex;
-    gap: 20px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
-    /* background-color: chartreuse; */
+.projectsContainer {
+    padding-top: 1rem;
+}
 
+.mainArea {
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
-    /* padding: 0 2rem; */
-    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .projectCard {
@@ -344,33 +350,27 @@ img {
 }
 
 @media (max-width: 1200px) {
+    .homePageContainer {
+        padding: 0;
+    }
+    
     .mainArea {
-        grid-template-columns: auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .projectCard {
-        width: 400px;
+        width: 350px;
         height: 195px;
         position: relative;
     }
 }
 
 @media (max-width: 768px) {
-    
-    .homePageSection {
+    .homePageContainer {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #f8f9fa;
-        /* background-color: #719ac4; */
+        padding: 1rem 1rem;
     }
-
-    /* .mainSection {
-        height: 100%;
-        display: flex;
-        background-color: #f8f9fa;
-    } */
 
     .mainArea {
         height: 100%;
@@ -378,4 +378,23 @@ img {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+.btnContainer {
+    padding-bottom: 1.5rem;
+}
+
+.showMore {
+    display: inline-flex;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 100vmax;
+    padding: 1.25em 2.5em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    line-height: 1;
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-400);
+    box-shadow: 0 1.125em 1em -1em var(--clr-accent-500);
 }
