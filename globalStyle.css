@@ -230,15 +230,27 @@ button:focus {
 
 .projectsContainer {
     padding-top: 1rem;
+    transition: all 1s ease-in;
 }
 
 .mainArea {
+    height: 0px;
+    opacity: 0; 
+    overflow: hidden;
     display: grid;
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5px;
     margin-bottom: 1rem;
+    animation: show 1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;  
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+        height: 195px;
+    }
 }
 
 .projectCard {
@@ -303,18 +315,18 @@ img {
     height: 85%;
     background-color: #dedfe0;
     border-radius: 0.25rem;
-    animation: pulse 3s infinite;
+    animation: pulse 2s infinite;
     box-shadow: 0 .1rem 0.5rem rgba(0,0,0,.35);
 }
 
 .removeSekelton {
     opacity: 0;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .adjustSkeleton {
     z-index: -1;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 @keyframes pulse {
@@ -355,12 +367,13 @@ img {
     }
     
     .mainArea {
+        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .projectCard {
-        width: 350px;
-        height: 195px;
+        width: auto;
+        height: 185px;
         position: relative;
     }
 }

@@ -35,8 +35,8 @@ const getProjects = () => {
     let currentProjects = paginatedProjects.map(({ link, image, name }) => {
         return projectTemplate(link, image, name)
     })
-    return currentProjects.join('')
-}
+    return currentProjects.join('')  
+}      
 
 total.innerText = numberOfProjects
 jsProjects.innerHTML = getProjects()
@@ -46,11 +46,11 @@ const skeletonLoad = () => {
     for (let i = 0; i < skeleton.length; i++) {
         setTimeout(() => {
             skeleton[i].classList.add('removeSekelton')
-        }, 2000);
+        }, 1000);
     
         setTimeout(() => {
             skeleton[i].classList.add('adjustSkeleton')
-        }, 3000);
+        }, 2000);
     }
 }
 
@@ -67,11 +67,11 @@ showMore.addEventListener('click', () => {
         btnContainer.innerHTML = '<button type="button" class="showMore">No More to Load</button>'
         return
     }else{
-        console.log(perPage, numberOfPages, numberOfProjects, currentPage)
         let extended = document.createElement('div')
         projectsContainer.appendChild(extended) 
         extended.classList.add('mainArea')
         extended.innerHTML = getProjects()
+        
         skeletonLoad()
     }
     

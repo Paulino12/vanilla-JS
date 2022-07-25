@@ -10,7 +10,7 @@ toggleMenu.addEventListener('click', () => {
         toggleMenu.classList.add('opened')
         openMenu.style.display = "none"
         closeMenu.style.display = "flex"
-        menuLevel2.classList.add('opened')
+        menuLevel2.classList.add('opened')  
     }else{
         toggleMenu.classList.remove('opened')
         openMenu.style.display = "flex"
